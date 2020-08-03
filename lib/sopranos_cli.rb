@@ -1,7 +1,9 @@
-require "sopranos_cli/version"
-require "sopranos_cli/api"
-require "sopranos_cli/cli"
-require "sopranos_cli/episodes"
+require_relative "sopranos_cli/episode"
+require_relative "sopranos_cli/version"
+require_relative "sopranos_cli/api"
+require_relative "sopranos_cli/cli"
+
+
 module SopranosCli
   class Error < StandardError; end
   # Your code goes here...

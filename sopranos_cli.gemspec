@@ -3,7 +3,7 @@ require_relative 'lib/sopranos_cli/version'
 Gem::Specification.new do |spec|
   spec.name          = "sopranos_cli"
   spec.version       = SopranosCli::VERSION
-  spec.authors       = ["Your Name"]
+  spec.authors       = ["KevinMalin"]
   spec.email         = ["racmalin@yahoo.com"]
 
   spec.summary       = %q{CLI to navigate information about Sopranos TV Show}
@@ -24,6 +24,8 @@ Gem::Specification.new do |spec|
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
   #spec.bindir        = "exe"
+  # spec.add_dependency "httparty"
   spec.executables   = ["sopranos"]
   spec.require_paths = ["lib"]
+  
 end

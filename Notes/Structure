@@ -1,0 +1,56 @@
+bundle gem sopranos_cli
+code sopranos_cli
+git add .
+git commit -m "initial commit"
+
+
+3 classes:
+CLI
+API
+Episodes
+
+main flow could be.
+Boot app and choose a season
+after choosing a season you could display a list of the episdoes in that season with the number and the name
+ask user to choose an episode
+display full details for that episode with a link to the webpage with all info(or simple summary of episode)
+
+while input != exit
+    ask_user_what_season_they_want-to_navigate
+    handle_their_choice(can take different paths-->Happy path= user chose & got/not Happy path user chose and was returned to 
+    choose again or exit)
+    while input != back
+        ask them which episode that they want more info for
+        show full details for episode they chose, or ask them again if they made a bad choice, and restart loop, or exit
+
+Episode class:
+by_season class method that takes a season as an argument and then returns all of the epsidoes from that season
+
+Responsibilites:
+API: Get data from API and return as ruby data structure
+CLI: print prompts to user, take input and display results
+Episode: Persist data, trigger requests to API when necessary, allow CLI access to stored data
+
+
+tell user that there are 6 seasons and ask them to choose which season
+after they choose the season, 
+display all the episodes for that season
+ask to choose episode
+then give summary of episode, or 
+option to choose again, or exit
+
+
+
+
+self.by_season(season)
+self.all.select{|episode|episode.season == season}
+
+@input = gets.chomp
+puts self.by_episode_with_summary(episode)
+self.all.by_episode_with_summary.select{|summary|episode.season == season}
+
+ def by_season
+ Episode.all.each_with_index(1) do |season, index|
+ puts "#{index}. #{season.number}"
+ end
+ end
