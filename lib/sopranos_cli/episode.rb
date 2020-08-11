@@ -4,7 +4,7 @@ module SopranosCli
       attr_accessor :season, :number, :summary, :name
 
       def self.all
-        @@all ||= self.load
+        @@all ||= load
       end
 
       def self.load

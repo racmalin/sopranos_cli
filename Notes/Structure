@@ -54,3 +54,8 @@ self.all.by_episode_with_summary.select{|summary|episode.season == season}
  puts "#{index}. #{season.number}"
  end
  end
+
+- Push your code up to github, work on the readme, and upload a video
+- Institute a loop in your menu
+- Implement validations for user input
+- Break your code into smaller, easily reusable methods
