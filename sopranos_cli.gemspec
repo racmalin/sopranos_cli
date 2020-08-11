@@ -3,7 +3,7 @@ require_relative 'lib/sopranos_cli/version'
 Gem::Specification.new do |spec|
   spec.name          = "sopranos_cli"
   spec.version       = SopranosCli::VERSION
-  spec.authors       = ["KevinMalin"]
+  spec.authors       = ["KevinCMalin"]
   spec.email         = ["racmalin@yahoo.com"]
 
   spec.summary       = %q{CLI to navigate information about Sopranos TV Show}

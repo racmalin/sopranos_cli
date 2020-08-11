@@ -11,7 +11,7 @@ module SopranosCli
         API.get_episodes.collect do |episode_hash|
           Episode.new(episode_hash)
         end
-      end
+      end 
     
       def self.by_season(season)
         self.all.select{|episode|episode.season == season}

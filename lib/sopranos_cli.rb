@@ -6,5 +6,5 @@ require_relative "sopranos_cli/cli"
 
 module SopranosCli
   class Error < StandardError; end
-  # Your code goes here...
+  # Your code goes here... 
 end
