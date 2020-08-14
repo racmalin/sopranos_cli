@@ -1,6 +1,6 @@
 # SopranosCli
 
-Welcome to Sopranos CLI where you can veiw the seasons, episodes, and a brief summary of each episode by using this interactive command line. This CLI is run by a site called TvMazeAPI, and the gem can be installed via Ruby Gem Install. When you visit the url listed here (http://api.tvmaze.com/seasons/527/episodes), you can simply search for the show you would like information from(it doesn't have to be the Sopranos-simply search the API for the show you want, and change the "#" between seasons, and episodes in the URL)it will run the same for whatever show you are looking for. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to Sopranos CLI where you can view the seasons, episodes, and a brief summary of each episode by using this interactive command line. This CLI is run by a site called TvMazeAPI, and the gem can be installed via Ruby Gem Install. When you visit the url listed here (http://api.tvmaze.com/seasons/527/episodes), you can simply search for the show you would like information from(it doesn't have to be the Sopranos-simply search the API for the show you want, and change the "#" between seasons, and episodes in the URL)it will run the same for whatever show you are looking for. To experiment with that code, run `bin/console` for an interactive prompt.
 
 
 
