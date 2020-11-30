@@ -30,17 +30,27 @@ module SopranosCli
                puts "#{@current_episode.summary}"  
             end
             
-            while @input.to_i != "exit"
-            return start
+            if @input.to_i != "exit"
+             puts "Would you like to exit, or search again?"
+            end
+            while @input == gets.chomp
+             return start
             end
           
-           else @input.to_i == "exit"
-                puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-                puts "Thanks for checking up on Tony and the boys!"
-                puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+           unless @input.to_i == "exit"
+             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+             puts "Thanks for checking up on Tony and the boys!"
+             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
            end
-         end
-      end
+         
+          
+        end
+    end
    end
+end
+
+
+
+  
 
 
