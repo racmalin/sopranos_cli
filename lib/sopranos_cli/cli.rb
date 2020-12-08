@@ -8,7 +8,8 @@ module SopranosCli
           or exit to quit."
           if @season_input != "exit" && @season_input != "back"
             @season_input = gets.chomp
-            if @season_input.to_i <= 6 && @season_input.to_i > 0
+           
+           if @season_input.to_i <= 6 && @season_input.to_i > 0
               @season = @season_input.to_i
               Episode.by_season(@season).each.with_index(1) do |episode, index|
                 puts "#{index}.#{episode.name}"  
@@ -19,7 +20,8 @@ module SopranosCli
           puts "Choose the episode you would like to see a summary for."
 
           @input = gets.chomp
-
+         
+         
           if @input != "exit" && @input != "back"
             
             if @input.to_i > 0 
@@ -31,23 +33,21 @@ module SopranosCli
             end
             
             if @input.to_i != "exit"
-             puts "Would you like to exit, or enter to search again?"
+             puts "Would you like to exit, or press enter to search again?"
             end
-            while @input == gets.chomp
-              start
-            end
+           
           
-           unless @input.to_i == "exit"
+            elsif @input.to_i == "exit"
              puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
              puts "Thanks for checking up on Tony and the boys!"
              puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-           end
+            end
          
           
         end
     end
    end
-end
+  # end
 
 
 

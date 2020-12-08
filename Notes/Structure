@@ -59,3 +59,4 @@ self.all.by_episode_with_summary.select{|summary|episode.season == season}
 - Institute a loop in your menu
 - Implement validations for user input
 - Break your code into smaller, easily reusable methods
+-Name spacing (Google for Namescope)to keep data form coliding
