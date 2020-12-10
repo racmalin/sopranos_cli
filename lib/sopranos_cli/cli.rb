@@ -6,8 +6,8 @@ module SopranosCli
         puts "There are six seasons of The Sopranos,
           Choose 1 thru 6 to view all the episodes within that season,then choose an episode to see a brief summary,
           or exit to quit."
-          if @season_input != "exit" && @season_input != "back"
-            @season_input = gets.chomp
+        while @season_input != "exit" && @season_input != "back"
+          @season_input = gets.chomp
            
            if @season_input.to_i <= 6 && @season_input.to_i > 0
               @season = @season_input.to_i
@@ -15,7 +15,7 @@ module SopranosCli
                 puts "#{index}.#{episode.name}"  
               end
             end
-          end
+        
            
           puts "Choose the episode you would like to see a summary for."
 
@@ -32,22 +32,24 @@ module SopranosCli
                puts "#{@current_episode.summary}"  
             end
             
-            if @input.to_i != "exit"
+            if @input != "exit"
              puts "Would you like to exit, or press enter to search again?"
-            end
-           
-          
-            elsif @input.to_i == "exit"
-             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-             puts "Thanks for checking up on Tony and the boys!"
-             puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-            end
-         
-          
+             
+                                
+        unless @input.to_i == "exit"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "Thanks for checking up on Tony and the boys!"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         end
-    end
-   end
-  # end
+      end
+    
+      end
+    end 
+  end
+end
+end
+
+  
 
 
 

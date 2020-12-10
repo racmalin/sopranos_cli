@@ -13,7 +13,7 @@ main flow could be.
 Boot app and choose a season
 after choosing a season you could display a list of the episdoes in that season with the number and the name
 ask user to choose an episode
-display full details for that episode with a link to the webpage with all info(or simple summary of episode)
+display full details for that episode(or simple summary of episode)
 
 while input != exit
     ask_user_what_season_they_want-to_navigate
@@ -59,4 +59,4 @@ self.all.by_episode_with_summary.select{|summary|episode.season == season}
 - Institute a loop in your menu
 - Implement validations for user input
 - Break your code into smaller, easily reusable methods
--Name spacing (Google for Namescope)to keep data form coliding
+-Name spacing (Google for Namescope)to keep data from coliding
