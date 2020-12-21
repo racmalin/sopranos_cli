@@ -4,4 +4,6 @@ require "bundler"
 require "bundler/setup"
 require "sopranos_cli" 
 
+
 SopranosCli::CLI.new.start
+

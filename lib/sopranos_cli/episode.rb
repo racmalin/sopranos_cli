@@ -16,6 +16,13 @@ module SopranosCli
       def self.by_season(season)
         self.all.select{|episode|episode.season == season}
       end
+
+      def self.find_by_name(name)
+        Episode.all.find{|episode|episode.name == name}
+      end
+        
+        
+
      
       def initialize(attributes = {} )
        @season = attributes["season"]

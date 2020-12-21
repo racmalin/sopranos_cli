@@ -13,7 +13,7 @@ main flow could be.
 Boot app and choose a season
 after choosing a season you could display a list of the episdoes in that season with the number and the name
 ask user to choose an episode
-display full details for that episode(or simple summary of episode)
+display a simple summary of episode
 
 while input != exit
     ask_user_what_season_they_want-to_navigate
@@ -21,7 +21,7 @@ while input != exit
     choose again or exit)
     while input != back
         ask them which episode that they want more info for
-        show full details for episode they chose, or ask them again if they made a bad choice, and restart loop, or exit
+        show summary details for episode they chose, or ask them again if they made a bad choice, and restart loop, or exit
 
 Episode class:
 by_season class method that takes a season as an argument and then returns all of the epsidoes from that season
@@ -59,4 +59,33 @@ self.all.by_episode_with_summary.select{|summary|episode.season == season}
 - Institute a loop in your menu
 - Implement validations for user input
 - Break your code into smaller, easily reusable methods
--Name spacing (Google for Namescope)to keep data from coliding
+- Name spacing (Google for Namescope)to keep data from coliding
+
+Inside of cli.rb
+-add additional menu option
+--Find Episode_by_name---
+
+               @input = gets.chomp
+
+              if @season_input.to_i == "name"
+                Episode.find_by_name(@name).each.with_index(name) do |episode, index|
+                  puts "#{index}.#{episode.name}" 
+                  puts "Type the name of the episode you're looking for?"
+              end
+              end
+def find_by_name
+    print "Which episode would you like to see?  Enter the name here: "
+    input = gets.chomp
+    if Episode.search_by_name(input) != []
+      episode = Episode.find_by_name(input)
+      list_episode(episode)
+    elsif input == "home"
+      ask_for_command
+    elsif input == "exit"
+      "exit"
+    else
+      puts "Whoops! I didn't find an episode by that name."
+      puts "'exit' will quit the program"
+      find_episode
+    end
+  end
