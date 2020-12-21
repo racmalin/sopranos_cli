@@ -1,7 +1,19 @@
+require "pry"
+
 module SopranosCli
 
     class Episode
       attr_accessor :season, :number, :summary, :name
+
+      
+
+      def initialize(attributes = {} )
+        @season = attributes["season"]
+        @number = attributes["number"]
+        @summary = attributes["summary"]
+        @name = attributes["name"]
+        
+      end
 
       def self.all
         @@all ||= load
@@ -18,20 +30,8 @@ module SopranosCli
       end
 
       def self.find_by_name(name)
-        Episode.all.find{|episode|episode.name == name}
-      end
-        
-        
-
-     
-      def initialize(attributes = {} )
-       @season = attributes["season"]
-       @number = attributes["number"]
-       @summary = attributes["summary"]
-       @name = attributes["name"]
-      end
-
-      
+        Episode.all.find{|episode|episode.name === name}
+      end        
     end
 
 end
